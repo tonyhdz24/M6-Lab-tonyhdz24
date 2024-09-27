@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 
 /* Image styles */
@@ -66,7 +67,7 @@ img {
 .logo-text {
   position: absolute;
   top: 65px; /* Distance from the top of the container */
-  left: 108px;
+  left: 115px;
   font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
