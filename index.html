@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Fancy letterheaded paper</title>
   </head>
   <body>
     <figure class="top-image-container">
-      <img src="./img/top-image.png" alt="Fancy letter hear image" />
-      <img src="./img/logo.png" alt="Fancy company logo" />
+      <img
+        class="top-bottom-imgs"
+        src="./img/top-image.png"
+        alt="Fancy letter hear image"
+      />
+      <img class="logo" src="./img/logo.png" alt="Fancy company logo" />
+      <p class="logo-text">
+        Awesome <br />
+        Company
+      </p>
     </figure>
     <header>
       <nav class="nav_languages">
@@ -18,17 +27,20 @@
         <a href="http://ro.lipsum.com/">Româna</a>
         <a href="http://es.lipsum.com/">Español</a>
         <a href="http://mk.lipsum.com/">македонски</a>
+        <a href="http://da.lipsum.com/">Dansk</a>
+        <a href="http://cn.lipsum.com/">中文简体</a>
       </nav>
       <h1>Lorem Ipsum</h1>
-      <h4>
-        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit..."
-      </h4>
-      <h5>
+      <p class="subheader subtile">
+        <em>
+          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit..."
+        </em>
+      </p>
+      <p class="subheader">
         "There is no one who loves pain itself, who seeks after it and wants to
         have it, simply because it is pain..."
-      </h5>
-      <!-- TODO Add header image -->
+      </p>
     </header>
     <hr />
     <main>
@@ -103,104 +115,101 @@
             Ipsum is therefore always free from repetition, injected humour, or
             non-characteristic words etc.
           </p>
-          <form method="post" action="/feed/html">
-            <table style="width: 100%">
-              <tbody>
-                <tr>
-                  <td rowspan="2">
-                    <input
-                      type="text"
-                      name="amount"
-                      value="5"
-                      size="3"
-                      id="amount"
-                    />
-                  </td>
-                  <td rowspan="2">
-                    <table style="text-align: left">
-                      <tbody>
-                        <tr>
-                          <td style="width: 20px">
-                            <input
-                              type="radio"
-                              name="what"
-                              value="paras"
-                              id="paras"
-                              checked="checked"
-                            />
-                          </td>
-                          <td><label for="paras">paragraphs</label></td>
-                        </tr>
-                        <tr>
-                          <td style="width: 20px">
-                            <input
-                              type="radio"
-                              name="what"
-                              value="words"
-                              id="words"
-                            />
-                          </td>
-                          <td><label for="words">words</label></td>
-                        </tr>
-                        <tr>
-                          <td style="width: 20px">
-                            <input
-                              type="radio"
-                              name="what"
-                              value="bytes"
-                              id="bytes"
-                            />
-                          </td>
-                          <td><label for="bytes">bytes</label></td>
-                        </tr>
-                        <tr>
-                          <td style="width: 20px">
-                            <input
-                              type="radio"
-                              name="what"
-                              value="lists"
-                              id="lists"
-                            />
-                          </td>
-                          <td><label for="lists">lists</label></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  <td style="width: 20px">
-                    <input
-                      type="checkbox"
-                      name="start"
-                      id="start"
-                      value="yes"
-                      checked="checked"
-                    />
-                  </td>
-                  <td style="text-align: left">
-                    <label for="start"
-                      >Start with 'Lorem<br />ipsum dolor sit amet...'</label
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td style="text-align: left">
-                    <input
-                      type="submit"
-                      name="generate"
-                      id="generate"
-                      value="Generate Lorem Ipsum"
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </form>
+          <table class="main-table">
+            <tbody>
+              <tr>
+                <td rowspan="2">
+                  <input
+                    type="text"
+                    name="amount"
+                    value="5"
+                    size="3"
+                    id="text-amount"
+                  />
+                  <label class="visually-hidden" for="text-amount"
+                    >Text Amount</label
+                  >
+                </td>
+                <td rowspan="2">
+                  <table class="inner-table">
+                    <tbody>
+                      <tr>
+                        <td class="radio-cell">
+                          <input
+                            type="radio"
+                            name="output-type"
+                            value="paragraphs"
+                            id="paras"
+                            checked="checked"
+                          />
+                        </td>
+                        <td><label for="paras">paragraphs</label></td>
+                      </tr>
+                      <tr>
+                        <td class="radio-cell">
+                          <input
+                            type="radio"
+                            name="output-type"
+                            value="words"
+                            id="words"
+                          />
+                        </td>
+                        <td><label for="words">words</label></td>
+                      </tr>
+                      <tr>
+                        <td class="radio-cell">
+                          <input
+                            type="radio"
+                            name="output-type"
+                            value="bytes"
+                            id="bytes"
+                          />
+                        </td>
+                        <td><label for="bytes">bytes</label></td>
+                      </tr>
+                      <tr>
+                        <td class="radio-cell">
+                          <input
+                            type="radio"
+                            name="output-type"
+                            value="lists"
+                            id="lists"
+                          />
+                        </td>
+                        <td><label for="lists">lists</label></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td class="checkbox-cell">
+                  <input
+                    type="checkbox"
+                    name="start"
+                    id="start"
+                    value="yes"
+                    checked="checked"
+                  />
+                </td>
+                <td class="label-cell">
+                  <label for="start"
+                    >Start with 'Lorem<br />ipsum dolor sit amet...'</label
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="submit-cell">
+                  <button type="button" name="generate" id="btn-generate">
+                    Generate Lorem Ipsum
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </article>
       </section>
     </main>
     <footer>
-      <!-- TODO Add footer image -->
       <address>
         <p>The Awesome Company</p>
         <p>
@@ -212,8 +221,14 @@
         </p>
       </address>
       <figure class="bottom-image-container">
-        <img src="./img/bottom-image.png" alt="Fancy letter footer image" />
+        <img
+          class="top-bottom-imgs"
+          src="./img/bottom-image.png"
+          alt="Fancy letter footer image"
+        />
       </figure>
     </footer>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

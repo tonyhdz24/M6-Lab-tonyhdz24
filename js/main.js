@@ -1,18 +1,19 @@
-window.onload = loaded;
+// Selecting elements from HTML
+const btnGenerate = document.getElementById("btn-generate");
+const inputTextAmount = document.getElementById("text-amount");
+const inputRadios = document.querySelectorAll('input[name="output-type"]');
 
-/**
- * Simple Function that will be run when the browser is finished loading.
- */
-function loaded() {
-    // Assign to a variable so we can set a breakpoint in the debugger!
-    const hello = sayHello();
-    console.log(hello);
+// Function when button clicked
+function handleClick() {
+  let selectedValue;
+  for (const radio of inputRadios) {
+    if (radio.checked) {
+      selectedValue = radio.value;
+      break;
+    }
+  }
+  alert("You selected: " + inputTextAmount.value + " " + selectedValue);
 }
 
-/**
- * This function returns the string 'hello'
- * @return {string} the string hello
- */
-export function sayHello() {
-    return 'hello';
-}
+// Set up event listener
+btnGenerate.addEventListener("click", handleClick);
